@@ -38,7 +38,7 @@ export default class Slider {
     if (!this.isDown) return;
 
     const y = e.touches ? e.touches[0].clientY : e.clientY;
-    const distance = (this.start - y) * 1;
+    const distance = (this.start - y) * 1.5;
 
     this.scroll.target = this.scroll.position + distance;
   }

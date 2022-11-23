@@ -1,3 +1,7 @@
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   font-family: sans-serif;
   font-size: 16px;
@@ -8,12 +12,15 @@ body {
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
+  // Fix for ios
+  position: relative;
+  height: 70vh;
+  height: -webkit-fill-available;
   overflow: hidden;
 }
 
 #app {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

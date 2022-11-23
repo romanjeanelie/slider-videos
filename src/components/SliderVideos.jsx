@@ -15,8 +15,7 @@ const VideoContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 90vh;
-  border-bottom: 3px solid lightgray;
+  height: 80vh;
   video {
     width: 100%;
     height: 100%;
