@@ -53,8 +53,6 @@ export default class Slider {
     const normalized = normalizeWheel(e);
     const speed = normalized.pixelY;
 
-    console.log({ speed });
-
     this.scroll.target += speed * 0.3;
 
     this.onCheckDebounce();

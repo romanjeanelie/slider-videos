@@ -9,7 +9,7 @@ const Svg = styled.svg`
   & .path {
     stroke: #333;
     stroke-linecap: round;
-    animation: dash 2s ease-in-out infinite;
+    animation: dash 1.5s ease-in-out infinite;
   }
   @keyframes rotate {
     100% {
@@ -37,7 +37,7 @@ const Spinner = () => {
   return (
     <Container>
       <Svg class="spinner" viewBox="0 0 50 50">
-        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="1.5"></circle>
+        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="2"></circle>
       </Svg>
     </Container>
   );
