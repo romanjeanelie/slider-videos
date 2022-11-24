@@ -111,6 +111,7 @@ export default class Slider {
     this.container.addEventListener("mousedown", this.onTouchDown.bind(this));
     this.container.addEventListener("mousemove", this.onTouchMove.bind(this));
     this.container.addEventListener("mouseup", this.onTouchUp.bind(this));
+    this.container.addEventListener("mouseleave", this.onTouchUp.bind(this));
 
     this.container.addEventListener("touchstart", this.onTouchDown.bind(this));
     this.container.addEventListener("touchmove", this.onTouchMove.bind(this));
