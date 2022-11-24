@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
-import { useAsset, createAsset } from "use-asset";
+
 // Modules
 import Slider from "@/modules/Slider.js";
+
+// Components
+import Spinner from "./Spinner";
 
 // Styles
 import styled from "styled-components";
@@ -28,11 +31,11 @@ const VideoContainer = styled.div`
   height: 100vh;
   height: -webkit-fill-available;
 
-  p {
+  & > div {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0) scale(0.2);
 
     transition: opacity 300ms;
     &.is-loaded {
@@ -68,7 +71,7 @@ const Video = ({ src, onAssetLoad }) => {
 
   return (
     <VideoContainer>
-      <p className={isLoaded && "is-loaded"}>loading</p>
+      {!isLoaded && <Spinner />}
       <video
         className={isLoaded && "is-loaded"}
         src={src}
@@ -77,7 +80,7 @@ const Video = ({ src, onAssetLoad }) => {
         loop
         playsInline
         autoPlay
-        preload="auto"
+        // preload="auto"
         onCanPlayThrough={() => setIsLoaded(true)}
       />
     </VideoContainer>
