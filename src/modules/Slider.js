@@ -18,9 +18,9 @@ export default class Slider {
       last: 0,
     };
 
-    this.onCheckDebounce = debounce(this.onCheck, 50);
-    this.addEventListeners();
+    this.onCheckDebounce = debounce(this.onCheck, 20);
 
+    this.addEventListeners();
     this.update();
   }
 
@@ -53,7 +53,9 @@ export default class Slider {
     const normalized = normalizeWheel(e);
     const speed = normalized.pixelY;
 
-    this.scroll.target += speed * 1;
+    console.log({ speed });
+
+    this.scroll.target += speed * 0.3;
 
     this.onCheckDebounce();
   }

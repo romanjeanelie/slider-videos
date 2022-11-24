@@ -1,13 +1,14 @@
 html {
   height: -webkit-fill-available;
+  overflow: hidden;
+  position: relative;
 }
 
 body {
   font-family: sans-serif;
   font-size: 16px;
-  background: #333;
-  color: #eee;
-  min-height: 100vh;
+  background: rgb(244, 240, 228);
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +16,7 @@ body {
   // Fix for ios
   position: relative;
   height: 70vh;
-  height: -webkit-fill-available;
+  min-height: -webkit-fill-available;
   overflow: hidden;
 }
 
