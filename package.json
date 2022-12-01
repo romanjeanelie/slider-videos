@@ -15,6 +15,7 @@
     "leva": "^0.9.30",
     "load-asset": "^1.2.0",
     "normalize-wheel-es": "^1.2.0",
+    "preload-it": "^1.4.0",
     "preloader": "^4.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
